@@ -1,4 +1,4 @@
-﻿# Blood Bank Management System
+# Blood Bank Management System (RedAid)
 
 <p align="center">
 	<strong>A role-based blood donation and inventory platform with an AI-assisted matching and forecasting service.</strong>
@@ -9,12 +9,38 @@
 	<img alt="Laravel" src="https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white">
 	<img alt="React" src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white">
 	<img alt="Python" src="https://img.shields.io/badge/Python-AI%20service-3776AB?logo=python&logoColor=white">
+	<a href="https://doi.org/10.5281/zenodo.23311005"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23311005.svg"></a>
 </p>
 
 This application connects donors, people requesting blood, and administrators in one place. It brings together donor and receiver workflows, blood inventory, donation requests, campaign management, notifications, and a separate Python service for AI-assisted features.
 
+Developed as the Final Year Project (CSC412 Project Work) for the B.Sc. Computer Science and Information Technology programme at the College of Applied Business and Technology, Tribhuvan University.
+
+## Team
+
+**Supervisor:** Santosh Sharma, Coordinator/Lecturer, Department of Computer Science and IT, College of Applied Business and Technology
+
+### Contributions
+
+**Swostik Paneru**
+- Designed and built the Laravel REST API, including database models, migrations and role-based routes for Donor, Receiver and Administrator users.
+- Implemented JWT authentication, email verification, password recovery and role switching.
+- Integrated the Laravel backend with the FastAPI machine-learning service for donor matching, request-priority classification, churn prediction, demand forecasting and campaign targeting.
+- Contributed to the React frontend, connecting user interfaces to the backend APIs.
+
+**Sudeep Raj Karki**
+- Set up the React frontend, including project structure, routing and the API client.
+- Developed REST API endpoints in the Laravel backend.
+
+**Bipin Aryal**
+- Developed frontend interfaces for donor, receiver and administrator workflows.
+- Contributed to the FastAPI machine-learning service.
+
+All three members co-authored the research paper describing the system and its evaluation.
+
 ## Contents
 
+- [Team](#team)
 - [What it does](#what-it-does)
 - [How it is organized](#how-it-is-organized)
 - [Requirements](#requirements)
@@ -23,6 +49,7 @@ This application connects donors, people requesting blood, and administrators in
 - [API overview](#api-overview)
 - [Tests and quality checks](#tests-and-quality-checks)
 - [Troubleshooting](#troubleshooting)
+- [Paper](#paper)
 
 ## What it does
 
@@ -141,3 +168,11 @@ npm run lint
 - **AI requests fail:** Start FastAPI on port `5000`, or set `AI_SERVICE_URL` in `backend/.env` to the running service address. Check Laravel's application logs for upstream request errors.
 - **Database or migration errors:** Confirm the `DB_*` settings in `backend/.env`, ensure the selected database exists, then rerun `php artisan migrate`.
 - **JWT setup errors:** Run `php artisan jwt:secret` from `backend/` after configuring the Laravel environment.
+
+## Paper
+
+**RedAid: A Web-Based Blood Bank Management System with Machine-Learning Support for Request Prioritization and Donor Matching**
+
+Aryal, B., Karki, S. R., & Paneru, S. (2026). Preprint, Zenodo. Supervisor: Santosh Sharma.
+
+DOI: [10.5281/zenodo.23311005](https://doi.org/10.5281/zenodo.23311005)
